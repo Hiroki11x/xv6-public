@@ -172,6 +172,10 @@ UPROGS=\
 	_usertests\
 	_wc\
 	_zombie\
+	_hello\
+	_forktest\
+	_minmax\
+_run
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)
