@@ -89,3 +89,18 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+int
+sys_getppid(void)
+{
+  return proc->parent->pid;
+}
+
+int
+sys_getdate(void){
+  struct rtcdate *r;
+  if(argptr(0, (void*)&r, sizeof(&r)) < 0)
+    return -1;
+  cmostime(r);
+  return 0;
+}

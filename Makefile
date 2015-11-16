@@ -175,6 +175,8 @@ UPROGS=\
 	_hello\
 	_forktest\
 	_minmax\
+	_ppidtest\
+	_date\
 _run
 
 fs.img: mkfs README $(UPROGS)
