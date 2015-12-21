@@ -47,3 +47,7 @@ main(int argc, char *argv[])
   
   exit();
 }
+
+//init殺す
+//キーボード割り込み
+//時計を消す
