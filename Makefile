@@ -178,6 +178,8 @@ UPROGS=\
 	_ppidtest\
 	_date\
 	_mystressfs\
+	_call_panic1\
+	_call_panic2\
 _run
 
 fs.img: mkfs README $(UPROGS)

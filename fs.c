@@ -49,6 +49,7 @@ bzero(int dev, int bno)
 
 // Blocks. 
 
+//-------------------------------------------------------------------------
 // Allocate a zeroed disk block.
 static uint
 balloc(uint dev)
@@ -71,8 +72,10 @@ balloc(uint dev)
     }
     brelse(bp);
   }
-  panic("balloc: out of blocks");
+  panic("balloc: out of blocks");//ここがmystressfsで呼ばれるpanic
 }
+
+//-------------------------------------------------------------------------
 
 // Free a disk block.
 static void

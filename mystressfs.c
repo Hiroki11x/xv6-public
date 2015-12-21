@@ -23,7 +23,7 @@ main(int argc, char *argv[])
   printf(1, "stressfs starting\n");
   memset(data, 'a', sizeof(data));
 
-  for(i = 0; i < 4000; i++)
+  for(i = 0; i < 4000; i++)//4->4000にしたところballoc out of blocks
     if(fork() > 0)
       break;
 
