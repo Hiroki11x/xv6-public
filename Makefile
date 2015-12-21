@@ -180,6 +180,7 @@ UPROGS=\
 	_mystressfs\
 	_call_panic1\
 	_call_panic2\
+	_call_panic3\
 _run
 
 fs.img: mkfs README $(UPROGS)
@@ -219,7 +220,7 @@ QEMUGDB = $(shell if $(QEMU) -help | grep -q '^-gdb'; \
 ifndef CPUS
 CPUS := 2
 endif
-QEMUOPTS = -hdb fs.img xv6.img -smp $(CPUS) -m 256$(QEMUEXTRA)
+QEMUOPTS = -hdb fs.img xv6.img -smp $(CPUS) -m 4$(QEMUEXTRA)
 
 qemu: fs.img xv6.img
 	$(QEMU) -serial mon:stdio $(QEMUOPTS)
